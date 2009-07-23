@@ -1,0 +1,33 @@
+<lift:surround with="default" at="content">
+    <div class="widget">
+    <lift:comet type="Track" name="Other">
+
+      <track:input>
+        <track:input/> 
+        <input type="submit" value="Track It" />
+      </track:input>
+
+      <track:body>
+        <h2>Tracking:&nbsp; <track:name/></h2>
+
+        <div style="height:400px; overflow:scroll"> 
+        <ul track:id="na" style="list-style-type: none">
+          <track:list>
+            <li><table>
+                <tr><td style="width:48px"><list:img/></td>
+                   <td> 
+                     <list:who/> <br />
+                     <i><list:msg/></i> <br /> 
+                     <list:when/>
+                   </td>
+                </tr>
+                </table>
+            </li>
+          </track:list>
+        </ul>
+        </div>
+      </track:body>
+
+    </lift:comet>
+    </div>
+</lift:surround>
