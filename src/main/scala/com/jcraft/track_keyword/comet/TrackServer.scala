@@ -43,7 +43,8 @@ object TrackTwitter extends Actor {
   var keywords: Set[String] = Set.empty[String]
   private var track:Option[TwitterStreamingAPI] = None
 
-  val (username, passwd) = ("XXX", "XXX")
+  val (username, passwd) = (Props.get("twitter.username") openOr "XXX", 
+                            Props.get("twitter.password") openOr "XXX")
 
   def act = {
     loop { react {
